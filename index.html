@@ -1,0 +1,990 @@
+<style type="text/css">
+  * {
+    padding: 0;
+    margin: 0;
+  } 
+
+  .container {
+    padding: 0px;
+    margin: 0px;
+    /* color: #404040; */
+    color: #a6a6a6;
+    font-size: 11pt;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #444;
+    /*background-color: #FFFDFA;*/
+    /*background: linear-gradient(to right, white, #eee, white);
+        background: -webkit-linear-gradient( right, white, #eee, white)*/
+    /*background-image: url("/PaintSwatches_1400x900.jpg");*/
+    /*font-family: 'textbook', arial, sans-serif;*/
+    /*margin-left: auto;
+        margin-right: auto;*/
+    /*max-width: 2000px;*/
+  }
+
+  body {
+    /* background-color: #FFFAFA !important;
+    background-color: #FAFAFA !important; */
+    background-color: #e6e6e6 !important;
+    background-color: #e6e6e6 !important;
+  }
+
+
+  .section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12pt;
+  }
+
+
+  .title {
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-size: 32pt;
+    line-height: 100%;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .conference {
+    font-size: 24px;
+  }
+
+  .footer {
+    color: rgb(9, 9, 107);
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 12pt;
+    line-height: 100%;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    font-size: 30pt;
+    line-height: 100%;
+    font-weight: 700;
+    color: #444;
+  }
+
+  .author {
+    font-size: 13pt;
+  }
+
+  .section_title {
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    font-size: 24pt;
+    line-height: 100%;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: #444;
+    /*margin-left: auto;
+        margin-right: auto;
+      /*line-height: 100%;*/
+    /*font-weight: 700;*/
+  }
+
+  .shadow {
+    -webkit-box-shadow: 5px 5px 5px #aaa;
+    -moz-box-shadow: 5px 5px 5px #aaa;
+    box-shadow: 5px 5px 5px #aaa;
+    margin-bottom: 10px;
+  }
+
+  .aff {
+    margin-bottom: 16px;
+    /*max-width: 40px;*/
+    max-height: 30px
+  }
+
+
+
+  .img_authors {
+    position: relative;
+    max-width: 130px;
+    max-height: 130px
+  }
+
+  .img_links {
+    position: relative;
+    max-width: 70px;
+    max-height: 70px
+  }
+
+
+  .text {
+    position: relative;
+    line-height: 2em;
+    overflow: hidden;
+  }
+
+  .fadingEffect {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: #FFFAFA;
+    -moz-animation: showHide 5s ease-in alternate infinite;
+    /* Firefox */
+    -webkit-animation: showHide 5s ease-in alternate infinite;
+    /* Safari and Chrome */
+    -ms-animation: showHide 5s ease-in alternate infinite;
+    /* IE10 */
+    -o-animation: showHide 5s ease-in alternate infinite;
+    /* Opera */
+    animation: showHide 5s ease-in alternate infinite;
+  }
+
+  @-webkit-keyframes showHide {
+
+    /* Chrome, Safari */
+    0% {
+      width: 100%
+    }
+
+    40% {
+      width: 0%
+    }
+
+    60% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @-moz-keyframes showHide {
+
+    /* FF */
+    0% {
+      width: 100%
+    }
+
+    40% {
+      width: 0%
+    }
+
+    60% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @-ms-keyframes showHide {
+
+    /* IE10 */
+    0% {
+      width: 100%
+    }
+
+    40% {
+      width: 0%
+    }
+
+    60% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @-o-keyframes showHide {
+
+    /* Opera */
+    0% {
+      width: 100%
+    }
+
+    40% {
+      width: 0%
+    }
+
+    60% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes showHide {
+    0% {
+      width: 100%
+    }
+
+    40% {
+      width: 0%
+    }
+
+    60% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+
+  #cf {
+    position: relative;
+    max-height: 301px;
+    /*width:450px;*/
+
+    width: 100%;
+    height: 100%;
+    /*overflow:hidden; */
+    /*width:inherit;*/
+
+    /*max-height: auto;*/
+
+    /*margin:0 auto;*/
+  }
+
+  #cf img {
+    position: absolute;
+
+    /*height:100%;*/
+    /*width:100%;*/
+
+    opacity: 0;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    animation-name: cfFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 28s;
+    /* 7*4 */
+  }
+
+
+  @keyframes cfFadeInOut {
+
+    /* fade out */
+    0% {
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 1;
+    }
+
+    /* fade in */
+    14.28% {
+      opacity: 1;
+    }
+
+    19.28% {
+      opacity: 0;
+    }
+  }
+
+  #cf img:nth-of-type(7) {
+    animation-delay: 24s;
+  }
+
+  #cf img:nth-of-type(6) {
+    animation-delay: 20s;
+  }
+
+  #cf img:nth-of-type(5) {
+    animation-delay: 16s;
+  }
+
+  #cf img:nth-of-type(4) {
+    animation-delay: 12s;
+  }
+
+  #cf img:nth-of-type(3) {
+    animation-delay: 8s;
+  }
+
+  #cf img:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+
+  #cf img:nth-of-type(1) {
+    animation-delay: 0s;
+  }
+
+  .row-centered {
+    text-align: center;
+  }
+
+  .col-centered {
+    display: inline-block;
+    float: none !important;
+    /* reset the text-align */
+    text-align: center;
+    /* inline-block space fix */
+    margin-right: -4px;
+    min-width: 170px;
+  }
+
+  html,
+  body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* height: 100%; */
+    /* need for iframe height 100% to work */
+  }
+
+  iframe {
+    box-sizing: border-box;
+    display: block;
+    
+  } 
+
+  .hint {
+    color: #A00;
+    font-size: 10pt;
+    margin-bottom: 10px;
+  }
+
+  .img-process {
+    /*width: 100%;*/
+    margin: 5px;
+    max-height: 200px;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .img-process:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+  .centeredd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  svg:hover {
+    fill: red;
+  }
+
+  .cropped-scheme {
+    /* width: 900px;
+    height: 300px; */
+    /* object-fit: cover; */
+    /* object-position: 0% 30%; */
+    /* border: 0px solid black; */
+    overflow: hidden;
+  }
+
+  .cropped-scheme img {
+    margin: -550px 0px -400px 0px;
+  }
+</style>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TRANSPR: Transparency Ray-Accumulating Neural 3D Scene Point Renderer</title>
+  
+  <meta property="og:image"
+    content="assets/transpr/content.png" />
+  <meta property="og:title" content="TRANSPR: Transparency Ray-Accumulating Neural 3D Scene Point Renderer" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+
+  <!-- Google fonts -->
+  <!-- <link href="../css/google-fonts.css" rel="stylesheet" type="text/css"> -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:300italic,400italic,600italic,400,700,300,600"
+    rel="stylesheet" type="text/css">
+
+  <!-- Photoswipe -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+      </script>
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  <script>
+    function resizeIframe(obj) {
+      obj.style.height = 0;
+      obj.style.height = (obj.contentWindow.document.body.scrollHeight + 5) + 'px';
+    }
+
+
+
+
+
+  </script>
+  <script language="JavaScript">
+
+    function resize_iframe() {
+      obj = document.getElementById("myiframe")
+
+      obj.style.height = 0;
+      obj.style.height = (obj.contentWindow.document.body.scrollHeight) + 'px';
+
+      // document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8;
+    }
+      // window.onresize=resize_iframe;
+
+
+  </script>
+
+</head>
+
+<body>
+  <script src="zepto.min.js"></script>
+  <script>
+    window.addEventListener('message', function (event) {
+      if (height = event.data['height']) {
+        $('iframe').css('height', height + 'px')
+      }
+    });
+
+
+    // var resizeEvent = new Event('resize');
+    // window.dispatchEvent(resizeEvent);
+
+  </script>
+  <div class="container">
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== TITLE ========================== -->
+    <!-- ====================================================== -->
+    <center>
+      <div class="title">TRANSPR: Transparency Ray-Accumulating Neural 3D Scene Point Renderer</div>
+      <!--<div class="subtitle">Version 2</div>-->
+      <div></div>
+    </center>
+
+    <p></p>
+    <center>
+      <div class="conference"><b>3DV 2020</b></div>
+    </center>
+    <br>
+
+    <center>
+      <div class="row row-eq-height" style="margin-bottom: 0px; margin-top: 10px">
+        <!-- <div class="col-sm-12"> -->
+        <div class="col-sm-12">
+
+          <div class="col-sm-4" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+            <a href="https://github.com/mvkolos">
+              <img src="assets/projects/maria_kolos_600p.JPG" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+              <div class="author"><span style="font-weight: 600">Maria Kolos*</span><br>Samsung AI</div>
+            </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-4" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+            <a href="https://seva100.github.io">
+              <img src="assets/projects/artem2_crop.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+              <div class="author"><span style="font-weight: 600">Artem Sevastopolsky*</span><br>Samsung AI, Skoltech</div>
+            </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-4" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+            <a href="http://sites.skoltech.ru/compvision/members/vilem/">
+              <img src="assets/projects/victor_lempitsky.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+              <div class="author"><span style="font-weight: 600">Victor Lempitsky</span><br>Samsung AI, Skoltech</div>
+            </a>
+            <!-- </div> -->
+          </div>
+
+        </div>
+        <!-- </div> -->
+      </div>
+    </center>
+
+    <br>
+    * indicates equal contribution
+
+    <!-- ====================================================== -->
+    <!-- ===================== TL;DR ======================= -->
+    <!-- ====================================================== -->
+
+    <div class="row section">
+      <p></p>
+      <!-- <big><b>TL;DR:</b> Given a set of RGB(D) images (of a room, person, or any other object) and a sparse point cloud reconstructed from them, our neural network can render this point cloud from any viewpoint. The rendered images look photorealistic even from extreme angles, point cloud representations yield high detailization even for thin object parts, and the system works in real-time. </big> -->
+      <big><b>TL;DR:</b> We extend the <a href="https://saic-violet.github.io/npbg">Neural Point-Based Graphics (NPBG)</a> by the ability of rendering transparent scenes, both synthetic and captured in-the-wild. Our neural pipeline is capable of performing photorealistic view synthesis of 3d point clouds of objects with semi-transparent parts and complex geometry. Several scenes can be rendered in conjunction, opacity of objects can be edited, and the non-transparent objects can be combined with the introduced transparency. </big>
+      <p></p>
+    </div>
+    <center>
+      <div class="row section">
+        <img src="assets/transpr/teaser.png" width="100%">
+      </div>
+    </center>
+    <!-- ====================================================== -->
+    <!-- ===================== LINKS ========================== -->
+    <!-- ====================================================== -->
+    <center>
+      <div class="row section" style="margin-bottom: -12px">
+        <div class="col-sm-12">
+          <!-- <div class="col-sm-12 center"> -->
+          <div class="col-sm-2 col-sm-offset-2" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+            <a href="https://arxiv.org/abs/2009.02819">
+              <!-- <img src="assets/projects/pdf.svg" class="img_links img-responsive"> -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="img_links img-responsive" viewBox="0 0 24 24"><path d="M11.363 2c4.155 0 2.637 6 2.637 6s6-1.65 6 2.457v11.543h-16v-20h7.363zm.826-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-2.628v3.686h.907v-1.472h1.49v-.732h-1.49v-.698h1.721v-.784zm-4.9 0h-1.599v3.686h1.599c.537 0 .961-.181 1.262-.535.555-.658.587-2.034-.062-2.692-.298-.3-.712-.459-1.2-.459zm-.692.783h.496c.473 0 .802.173.915.644.064.267.077.679-.021.948-.128.351-.381.528-.754.528h-.637v-2.12zm-2.74-.783h-1.668v3.686h.907v-1.277h.761c.619 0 1.064-.277 1.224-.763.095-.291.095-.597 0-.885-.16-.484-.606-.761-1.224-.761zm-.761.732h.546c.235 0 .467.028.576.228.067.123.067.366 0 .489-.109.199-.341.227-.576.227h-.546v-.944z"/></svg>
+              <p></p>
+              <div class="author">Paper</div>
+            </a>
+            <!-- </div> -->
+          </div>
+          <!-- <div class="col-sm-3" style="margin-bottom: 12px">
+            <a href="https://github.com/alievk/npbg_eval">
+              <img src="assets/projects/data.svg" class="img_links img-responsive">
+              <div class="author">Data</div>
+            </a>
+          </div> -->
+          <div class="col-sm-2 col-sm-offset-1" style="margin-bottom: 12px">
+            <a href="https://www.youtube.com/watch?v=VJ_JFPCiafc">
+              <svg xmlns="http://www.w3.org/2000/svg" class="img_links img-responsive" viewBox="0 0 24 24"><path d="M10 9.333l5.333 2.662-5.333 2.672v-5.334zm14-4.333v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-4 7c-.02-4.123-.323-5.7-2.923-5.877-2.403-.164-7.754-.163-10.153 0-2.598.177-2.904 1.747-2.924 5.877.02 4.123.323 5.7 2.923 5.877 2.399.163 7.75.164 10.153 0 2.598-.177 2.904-1.747 2.924-5.877z"/></svg>
+              <p></p>
+              <div class="author">Video</div>
+            </a>
+          </div>
+          <div class="col-sm-2 col-sm-offset-1" style="margin-bottom: 12px">
+            <!-- <div class="col-sm-12"> -->
+            <a href="https://github.com/mvkolos/TRANSPR">
+              <!-- <img src="assets/projects/github.svg" class="img_links img-responsive">-->
+              <svg xmlns="http://www.w3.org/2000/svg"  class="img_links img-responsive" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <p></p>
+              <div class="author">Code</div>
+            </a>
+            <!-- </div> -->
+          </div>
+
+
+          <!-- <div class="col-sm-3" style="margin-bottom: 12px">
+            <a href="" >
+                <img src="/assets/projects/github.svg" class="img_links img-responsive">
+                <div class="author">Video</div>
+            </a>
+        </div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </center>
+
+    <!-- ====================================================== -->
+    <!-- ===================== ABSTRACT ======================= -->
+    <!-- ====================================================== -->
+
+
+    <div class="row section text-justify">
+      <!-- <div class="col-xs-8 col-xs-offset-2 text-justify"> -->
+      <div class="section_title">Abstract</div>
+     <p> We propose and evaluate a neural point-based graphics method that can model semi-transparent scene parts. Similarly to its predecessor pipeline, ours uses point clouds to model proxy geometry, and augments each point with a neural descriptor. Additionally, a learnable transparency value is introduced in our approach for each point. </p>
+
+      <p>Our neural rendering procedure consists of two steps. Firstly, the point cloud is rasterized using ray grouping into a multi-channel image. This is followed by the neural rendering step that "translates" the rasterized image into an RGB output using a learnable convolutional network. New scenes can be modeled using gradient-based optimization of neural descriptors and of the rendering network.</p>
+      <!-- <div class="row section cropped-scheme"> -->
+      <div class="row section">
+        <center>
+          <!-- <img src="assets/transpr/transpr_scheme.svg" width="70%">   -->
+          <img src="assets/transpr/transpr_scheme.png" width="80%">  
+        </center>
+      </div>
+
+      <p>We show that novel views of semi-transparent point cloud scenes can be generated after training with our approach. Our experiments demonstrate the benefit of introducing semi-transparency into the neural point-based modeling for a range of scenes with semi-transparent parts. </p>
+    </div>
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== TEASER ============== -->
+    <!-- ====================================================== -->
+    <!-- 
+    <br>
+  <center>
+    <div class="row section center row-eq-height">
+      <div class="col center col-sm-8 col-sm-offset-2">
+        <div id="cf">
+          <center>
+          <img src="/assets/deep-image-prior/teaser/cropped_01.png" class="img-responsive" id="firstimage"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_02.png" class="img-responsive"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_03.png" class="img-responsive"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_09.png" class="img-responsive"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_05.png" class="img-responsive"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_10.png" class="img-responsive"/>
+          <img src="/assets/deep-image-prior/teaser/cropped_07.png" class="img-responsive" id="lastimage"/>
+          </center>
+        </div>
+        <span style="font-size:14px"><i>Example results on several image restoration problems. We use deep neural networks, but we never train/pretrain them using datasets. We use them as a structured image prior</i>.
+        </span>
+      </div>
+    </div>
+  </center>
+ -->
+
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== Main idea ======================= -->
+    <!-- ====================================================== -->
+    <!-- <div class="row section">
+      <div class="section_title">Main idea</div>
+      <p>
+        TODO
+      </p>
+    </div> -->
+    
+    <!-- <div class="row section cropped-scheme">
+      <center>
+        <img src="assets/transpr/transpr_scheme.svg" width="70%">  
+      </center>
+    </div> -->
+
+    <!-- ====================================================== -->
+    <!-- ======================= SYNTHETIC DATA =============== -->
+    <!-- ====================================================== -->
+    <div class="row section text-justify">
+      <div class="section_title">Synthetic data</div>
+
+      <p>We leverage synthetic RGBA data to demonstrate the ability of TRANSPR to learn physically-based transparency with 4-channel supervision and compare results with the state-of-the-art methods: NPBG, Neural Volumes, and NeRF.</p>
+    </div>
+     
+    
+    <!-- TODO add gt + captions-->
+
+    <p></p>
+    <div class="row">
+      <div class="col-sm-12 ">
+        <!-- <source src="assets/transpr/videos/aquarium.mp4" type="video/mp4"> --> <!-- https://youtu.be/d9VbmMPyfNI -->
+          <iframe width="100%" height="40%" src="https://www.youtube.com/embed/d9VbmMPyfNI?playlist=d9VbmMPyfNI&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+          <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/aquarium.mp4">aquarium.mp4</a>.</i>
+          <p></p><br>
+      </div>
+      <div class="col-sm-12 ">
+          <!-- <source src="assets/transpr/videos/static_smoke.mp4" type="video/mp4"> --> <!-- https://youtu.be/Lq9lcOxtcDQ -->
+          <iframe width="100%" height="40%" src="https://www.youtube.com/embed/Lq9lcOxtcDQ?playlist=Lq9lcOxtcDQ&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+          <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/static_smoke.mp4">static_smoke.mp4</a>.</i>
+          <p></p><br>
+      </div>
+    </div>
+    <p></p>
+
+    <!-- <div class="container-2 w-container">
+      <div data-delay="10000" data-animation="slide" data-autoplay="1" data-duration="800" data-infinite="1" class="nerf_slider_v2 w-slider">
+        <div class="mask w-slider-mask">
+          <div class="slide w-slide">
+            <div class="div-block-9 first_video">
+              <div class="">
+                <video width="100%" height="100%" muted controls loop preload="metadata">
+                  <source src="assets/transpr/videos/aquarium_baselines.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="div-block-9">
+              <div class="video_class w-embed">
+                <video width="100%" height="100%" muted controls loop preload="metadata">
+                  <source src="assets/transpr/videos/aquarium_baselines.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="w-slide">
+            <div class="div-block-9">
+              <div class="video_class w-embed">
+                <video width="100%" height="100%" muted controls loop preload="metadata">
+                  <source src="assets/transpr/videos/aquarium_baselines.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="div-block-9 last_block">
+              <div class="video_class w-embed">
+                <video width="100%" height="100%" muted controls loop preload="metadata">
+                  <source src="assets/transpr/videos/aquarium_baselines.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="nerf_slide_nav w-slider-nav w-slider-nav-invert w-round"></div>
+      </div>
+    </div> -->
+
+    <!-- ====================================================== -->
+    <!-- ======================= DYNAMIC RENDERING =============== -->
+    <!-- ====================================================== -->
+    <div class="row section text-justify">
+        <div class="section_title">Dynamic rendering</div>
+      
+      <p>We show how TRANSPR can model the dynamic behavior of smoke by interpolating descriptors for every second animation frame.</p>
+      <p>Each animation frame was treated like a separate scene. TRANSPR linearly interpolates the descriptors, and Neural Volumes employes a view-conditioning strategy based on 3 nearest train cameras. The inferred NeRF images for the trained frames were linearly interpolated. The following demo showcases a single frame rendering, as well as the comparison with the ground truth.</p>
+    
+      <p></p>
+        <div class="col-sm-12">
+            <!-- <source src="assets/transpr/videos/dyn_smoke.mp4" type="video/mp4"> --> <!-- https://youtu.be/SXKBkmpKL_M -->
+              <iframe width="100%" height="40%" src="https://www.youtube.com/embed/SXKBkmpKL_M?playlist=SXKBkmpKL_M&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+              <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/dyn_smoke.mp4">dyn_smoke.mp4</a>.</i>
+              <p></p><br>
+          </div>
+      <!-- <p></p>
+        Neural Volumes naturally uses a view-conditioning strategy tied to 3 train cameras. The inferred NeRF images for the trained frames were linearly interpolated.
+      </p> -->
+    </div>
+    
+    <!-- ====================================================== -->
+    <!-- ============= TRANSPARENT PHOTOGRAMMETRY ============= -->
+    <!-- ====================================================== -->
+    <div class="row section text-justify">
+        <div class="section_title">Transparent photogrammetry</div>
+      
+  
+      <p>We present the comparative performance of TRANSPR on an in-the-wild semi-transparent scene trained using only RGB supervision.</p>
+
+      <p>Transparent glass is an extremely challenging surface for photogrammetric reconstruction, 
+          so a special scenario with two video sequences was considered for the scene to obtain a complex geometry.
+          First, a 180° sequence of flowers in a transparent vase was captured as is. 
+          Afterwards, the vase was wrapped into a paper with checkerboard pattern. 
+          Finally, point clouds of each sequence were reconstructed and geometrically aligned. </p>
+      <p></p><br>
+
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-2">
+            <div class="">
+              <video id="orig_gt" height="50%" muted="" controls="" loop="" preload="metadata" poster="">
+                <source src="assets/transpr/videos/orig_gt.mp4" type="video/mp4"> <!-- -->
+              </video>
+            </div>
+            <i>Sequence without wrapping</i>
+          </div>
+          <div class="col-sm-4">
+            <div class="">
+              <video id="checkerboard_gt" height="50%" muted="" controls="" loop="" preload="metadata" poster="">
+                <source src="assets/transpr/videos/checkerboard_gt.mp4" type="video/mp4"> <!-- -->
+              </video>
+            </div>
+            <i>Sequence with wrapping</i>
+          </div>
+          <p></p><br>
+        </div>
+
+        <p></p><br>
+
+        <div class="col-sm-12">
+            <!-- <source src="assets/transpr/videos/flowers.mp4" type="video/mp4"> -->
+            <!-- <source src="assets/transpr/videos/flowers.webm" type="video/mp4"> -->    <!-- https://youtu.be/PuwzMoeZsJs -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/PuwzMoeZsJs?playlist=PuwzMoeZsJs&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/flowers.mp4">flowers.mp4</a>.</i>
+            <p></p><br>
+          </div>
+      <p></p>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ============= TRANSPARENCY MANIPULATION ============== -->
+    <!-- ====================================================== -->
+    <div class="row section text-justify">
+        <div class="section_title">Transparency manipulation</div>
+      
+  
+      <p>We demonstrate the possibility of TRANSPR to alter the learned transparency of the objects on Chiffon shirt and Scarf scenes. </p>
+      
+      <p></p>
+        <div class="col-sm-12 ">
+            <!-- <source src="assets/transpr/videos/scarf_table.mp4" type="video/mp4"> --> <!-- https://youtu.be/yRULuTQHtEs -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/yRULuTQHtEs?playlist=yRULuTQHtEs&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/scarf_table.mp4">scarf_table.mp4</a>.</i>
+            <p></p><br>
+        </div>
+        <div class="col-sm-12 ">
+            <!-- <source src="assets/transpr/videos/scarf_and_shirt.mp4" type="video/mp4"> --> <!-- https://youtu.be/TriDpJonxL0 -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/TriDpJonxL0?playlist=TriDpJonxL0&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/scarf_and_shirt.mp4">scarf_and_shirt.mp4</a>.</i>
+            <p></p><br>
+        </div>
+      <p></p>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ==================== SCENE COMPOSITION =============== -->
+    <!-- ====================================================== -->
+    <div class="row section">
+        <div class="section_title">Scene composition</div>
+  
+    <p>We show how TRANSPR extends the scene editing scenario originally proposed in NPBG with added or altered 
+      transparency allowing to jointly render synthetic and real-world assets. </p>
+        <div class="col-sm-12 ">
+            <!-- <source src="assets/transpr/videos/aloe_smoke.mp4" type="video/mp4"> --> <!-- https://youtu.be/Ah2WW0DlQbw -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/Ah2WW0DlQbw?playlist=Ah2WW0DlQbw&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/aloe_smoke.mp4">aloe_smoke.mp4</a>.</i>
+            <p></p><br>
+        </div>
+        <p></p><br>
+        <div class="col-sm-12 ">
+            <!-- <source src="assets/transpr/videos/jewelry_smoke.mp4" type="video/mp4"> --> <!-- https://youtu.be/6PSYFpWqtG4 -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/6PSYFpWqtG4?playlist=6PSYFpWqtG4&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/jewelry_smoke.mp4">jewelry_smoke.mp4</a>.</i>
+            <p></p><br>
+        </div>
+        <p></p><br>
+        <div class="col-sm-12 ">
+            <!-- <source src="assets/transpr/videos/church.mp4" type="video/mp4"> --> <!-- https://youtu.be/0niEAalUbG8 -->
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/0niEAalUbG8?playlist=0niEAalUbG8&autoplay=1&mute=1&loop=1" allowfullscreen="1" frameborder="0"></iframe>
+            <i>Setting the highest quality is recommended. Original video: <a href="assets/transpr/videos/church.mp4">church.mp4</a>.</i>
+            <p></p><br>
+        </div>
+    
+      <p></p><br>
+    </div>
+     <!-- ====================================================== -->
+    <!-- ==================== CITATION =============== -->
+    <!-- ====================================================== -->
+    <div class="row section">
+      <div class="section_title">Citation</div>
+    </div>
+
+    <b>BibTeX:</b>
+    <pre>@misc{kolos2020transpr,
+      title={TRANSPR: Transparency Ray-Accumulating Neural 3D Scene Point Renderer},
+      author={Maria Kolos and Artem Sevastopolsky and Victor Lempitsky},
+      year={2020},
+      eprint={2009.02819},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+    }</pre>
+
+    <p></p><br>
+    <p></p><br>
+    <p></p><br>
+
+    <div>
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc/3.0/88x31.png"/></a>
+      <br />
+      This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0">Creative Commons Attribution-NonCommercial 4.0 International License</a> (CC-BY-NC).
+    </div>
+
+
+
+  </div>
+  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"   
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+
+    function change_height_cf(el) {
+      if (el.height > 0) {
+        document.getElementById("cf").style.height = el.height + 8;
+      };
+    };
+
+
+    $(document).ready(function () {
+      // $('#firstimage').on('load', function(){
+      //    console.log(2);
+      //     change_height_cf(document.getElementById("firstimage"));
+      // });
+
+      // if ($('#firstimage')[0].complete) {
+      //   console.log(3);
+      //   change_height_cf(document.getElementById("firstimage"));
+      // };
+
+      // $('#lastimage').on('load', function(){
+      //   console.log(2);
+      //   change_height_cf(document.getElementById("lastimage"));
+      // });
+      // if ($('#lastimage')[0].complete) {
+      //   console.log(3);
+      //   change_height_cf(document.getElementById("lastimage"));
+      // };
+
+      var screenWidth = $(window).width();
+      console.log(screenWidth);
+      if (screenWidth >= 800) {
+        $('#aquarium').attr('autoplay', 'autoplay');
+        $('#static_smoke').attr('autoplay', 'autoplay');
+        $('#dyn_smoke').attr('autoplay', 'autoplay');
+        $('#orig_gt').attr('autoplay', 'autoplay');
+        $('#checkerboard_gt').attr('autoplay', 'autoplay');
+        $('#flowers').attr('autoplay', 'autoplay');
+        $('#scarf_table').attr('autoplay', 'autoplay');
+        $('#scarf_and_shirt').attr('autoplay', 'autoplay');
+        $('#aloe_smoke').attr('autoplay', 'autoplay');
+        $('#jewelry_smoke').attr('autoplay', 'autoplay');
+        $('#church').attr('autoplay', 'autoplay');
+      }
+
+    });
+
+  </script>
+
+  
+
+</body>
+
+</html>
